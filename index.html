@@ -1,19 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>SBI PO Topic Tracker</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>SBI PO Preparation Tracker</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>SBI PO Topic Tracker</h1>
+  <header>
+    <h1>SBI PO Preparation Tracker</h1>
+    <button id="theme-toggle">🌙 Dark Mode</button>
+  </header>
 
   <div class="buttons">
-    <button onclick="showModule('reasoning')">Reasoning</button>
-    <button onclick="showModule('english')">English</button>
-    <button onclick="showModule('quant')">Quant</button>
-    <button onclick="showModule('computer')">Computer</button>
-    <button onclick="showModule('gk')">GK / Banking</button>
+    <button onclick="showModule('reasoning')">🧠 Reasoning</button>
+    <button onclick="showModule('english')">📚 English</button>
+    <button onclick="showModule('quant')">🔢 Quant</button>
+    <button onclick="showModule('computer')">💻 Computer</button>
+    <button onclick="showModule('gk')">🌍 GK / Banking</button>
+  </div>
+
+  <input type="text" id="searchBox" placeholder="🔍 Search topic..." oninput="filterTopics()" />
+
+  <div class="overall-progress">
+    <div id="overall-progress-circle" class="circular-progress">0%</div>
+    <p>🎯 Overall Completion</p>
   </div>
 
   <div id="modules">

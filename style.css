@@ -1,27 +1,64 @@
+:root {
+  --bg: #f4faff;
+  --text: #003366;
+  --card: #eef6ff;
+  --done: #d1ffd1;
+  --highlight: #0077cc;
+}
+
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: #f4f4f4;
+  background: var(--bg);
   padding: 20px;
   text-align: center;
+  color: var(--text);
+  transition: 0.3s ease;
+}
+
+body.dark {
+  --bg: #121212;
+  --text: #f0f0f0;
+  --card: #2c2c2c;
+  --done: #1b3b2f;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto 20px;
 }
 
 h1 {
-  color: #2c3e50;
+  margin: 0;
+  font-size: 24px;
 }
 
-.buttons button {
-  margin: 10px;
-  padding: 10px 20px;
-  font-size: 15px;
-  border: none;
-  background-color: #2980b9;
+#theme-toggle {
+  padding: 8px 12px;
+  background: #003366;
   color: white;
+  border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
+.buttons button {
+  margin: 10px;
+  padding: 12px 20px;
+  font-size: 15px;
+  border: none;
+  background-color: var(--highlight);
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
 .buttons button:hover {
-  background-color: #1c5980;
+  background-color: #005fa3;
+  transform: scale(1.05);
 }
 
 .module {
@@ -33,10 +70,10 @@ h1 {
 }
 
 .topic {
-  background-color: #ffe5e5;
+  background-color: var(--card);
   margin: 10px 0;
   padding: 10px 15px;
-  border-left: 6px solid red;
+  border-left: 6px solid #cc3300;
   border-radius: 5px;
   display: flex;
   align-items: center;
@@ -44,7 +81,7 @@ h1 {
 }
 
 .topic.completed {
-  background-color: #e6ffe6;
+  background-color: var(--done);
   border-left-color: green;
   text-decoration: line-through;
 }
@@ -53,4 +90,34 @@ h1 {
   margin-left: 10px;
   flex-grow: 1;
   cursor: pointer;
+}
+
+#searchBox {
+  display: none;
+  margin: 20px auto;
+  padding: 10px;
+  width: 80%;
+  max-width: 500px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+.circular-progress {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: conic-gradient(var(--highlight) 0%, #ddd 0%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  font-weight: bold;
+  font-size: 18px;
+  color: var(--text);
+  transition: 0.4s ease-in-out;
+}
+
+.overall-progress {
+  margin: 30px auto;
 }

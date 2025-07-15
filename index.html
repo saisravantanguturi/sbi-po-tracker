@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SBI PO Topic Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>SBI PO Topic Tracker</h1>
+
+  <div class="buttons">
+    <button onclick="showModule('reasoning')">Reasoning</button>
+    <button onclick="showModule('english')">English</button>
+    <button onclick="showModule('quant')">Quant</button>
+    <button onclick="showModule('computer')">Computer</button>
+    <button onclick="showModule('gk')">GK / Banking</button>
+  </div>
+
+  <div id="modules">
+    <div id="reasoning" class="module"></div>
+    <div id="english" class="module"></div>
+    <div id="quant" class="module"></div>
+    <div id="computer" class="module"></div>
+    <div id="gk" class="module"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
